@@ -21,7 +21,7 @@ def main():
     print("       /   | __  ___________ _/ /")
     print("      / /| |/ / / / ___/ __ `/ / ")
     print("     / ___ / /_/ / /  / /_/ / /  ")
-    print("    /_/  |_\__,_/_/   \__,_/_/   ")
+    print(r"    /_/  |_\__,_/_/   \__,_/_/   ")
     print(f" Copyright ©2022 DAAV, LLC - v{config.VERSION}")
     print(f" Licensed under the MIT license. See LICENSE for details.\n")
 
