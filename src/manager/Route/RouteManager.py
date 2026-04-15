@@ -24,9 +24,13 @@ class RouteManager:
         self.Select(len(self.Routes) - 1)
 
     def Select(self, index: int) -> bool:
-        if index < 0 and index >= len(self.Routes):
+        if index < 0 or index >= len(self.Routes):
             return False
-        self.manager.Execute(Commands.SelectRoute(self))
+        prevRoute = self.Live
+        prevIndex = self.Selected
+        currRoute = self.Routes[index]
+        currIndex = index
+        self.manager.Execute(Commands.SelectRoute(self, prevRoute, prevIndex, currRoute, currIndex))
         return True
 
     def Deselect(self) -> None:

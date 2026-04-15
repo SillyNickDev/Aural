@@ -12,3 +12,9 @@ class AudioCableManager:
     def __init__(self, manager):
         self.log = Logger("Aural.Manager.AudioCables", "manager.log")
         self.manager = manager
+        self.AudioCables = []
+
+    def Create(self):
+        cable = AudioCable()
+        self.AudioCables.append(cable)
+        self.log.debug(f"Created audio cable: {cable.Configuration['Name']}")
